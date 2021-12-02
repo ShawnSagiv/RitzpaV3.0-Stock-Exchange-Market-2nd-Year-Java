@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+        table {
+            width:80%;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        #t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        #t01 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        #t01 th {
+            background-color: black;
+            color: white;
+        }
+        #t02 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        #t02 tr:nth-child(odd) {
+            background-color: #fff;
+        }
+        #t02 th {
+            background-color: white;
+            color: black;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111111;
+        }
+
+        select
+        {
+
+            background-color: #111111;
+            color: white;
+        }
+
+        /* for the scrolling of the table */
+        #table-wrapper {
+            position:relative;
+        }
+        #table-scroll {
+            height:250px;
+            overflow:auto;
+            margin-top:20px;
+        }
+        #table-wrapper table {
+            width:80%;
+
+        }
+        #table-wrapper table thead th .text {
+            position:absolute;
+            top:-20px;
+            z-index:2;
+            height:20px;
+            width:35%;
+            border:1px solid #ff0000;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<h1>Microsoft: MSFT (175$)</h1>
+<p>Live Info!</p>
+
+<ul>
+    <li><a href="#news">Symbol: MSFT</a></li>
+    <li><a href="#news">Company: Microsoft</a></li>
+    <li><a href="#news">Stock Gate: 197.343$</a></li>
+    <li><a href="#news">Stock Cycle: 76,345,434$</a></li>
+    <li><a href="#contact"></a></li>
+
+    <li><a href="#about">Cash: 387,098$</a></li>
+</ul>
+<br>
+
+<h2>Trade Ordinance:</h2>
+
+
+<table id="t01">
+    <tr>
+        <th>Trade Instruction:</th>
+        <th>Type:</th>
+        <th>Stocks Amount:</th>
+        <th>Stock Price:</th>
+        <th>Apply Now:</th>
+
+
+    </tr>
+    <tr>
+        <td><form>
+            <input type="radio" id="MKT" name="fav_language" value="HTML">
+            <label for="MKT">MKT</label><br><br>
+            <input type="radio" id="LMT" name="fav_language" value="HTML">
+            <label for="LMT">LMT</label><br><br>
+        </form></td>
+        <td><form>
+            <input type="radio" id="buy" name="fav_language" value="HTML">
+            <label for="buy">Buy</label><br><br>
+        </form></td>
+        <td>please enter the amount in the field below: </td>
+        <td>please enter the Max/Limit value per share:</td>
+        <td><input type="submit" value="Apply Now"></td>
+
+    </tr>
+    <tr>
+        <td><form>
+            <input type="radio" id="FOK" name="fav_language" value="HTML">
+            <label for="FOK">FOK</label><br><br>
+            <input type="radio" id="IOC" name="fav_language" value="HTML">
+            <label for="IOC">IOC</label><br><br>
+        </form></td>
+        <td><form>
+            <input type="radio" id="sell" name="fav_language" value="HTML">
+            <label for="sell">Sell</label><br><br>
+        </form></td>
+        <td><input type="text" id="amountOfStocks" name="amountOfStocks"><br></td>
+        <td><input type="text" id="amountPerShare" name="amountPerShare"><br></td>
+    </tr>
+</table>
+
+
+
+<br>
+<h2>List Of Transactions:</h2>
+
+<div id="table-wrapper">
+    <div id="table-scroll">
+        <table id="t01">
+            <tr>
+                <th>Company Name</th>
+                <th>Company Symbol</th>
+                <th>Stock Gate</th>
+                <th>Sum Of Stocks</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>googlel</td>
+                <td>GOOL</td>
+                <td>20$</td>
+                <td>12</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Microsoft</td>
+                <td>MSFT</td>
+                <td>94$</td>
+                <td>111</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
+

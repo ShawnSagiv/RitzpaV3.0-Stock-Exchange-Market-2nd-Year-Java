@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script type="text/javascript" src="/Rizpa_v3/common/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="/Rizpa_v3/common/context-path-helper.js"></script>
+    <script src="main-screen.js"></script>
+    <script type="text/javascript" language="javascript">
+        // let's start the jQuery while I wait.
+        // step 1: onload - capture the submit event on the form.
+        $(function() { // onload...do
+            $("#uploadForm").submit(function() {
+                var file1 = this[0].files[0];
+                var formData = new FormData();
+                formData.append("fake-key-1", file1);
+                $.ajax({
+                    method:'POST',
+                    data: formData,
+                    url: this.action,
+                    processData: false, // Don't process the files
+                    contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+                    timeout: 4000,
+                    error: function(e) {
+                        $("#result").text(e);
+                    },
+                    success: function(r) {
+                        $("#result").text("File uploaded successfully");
+                    }
+                });
+
+                // return value of the submit operation
+                // by default - we'll always return false so it doesn't redirect the user.
+                return false;
+            })
+        })
+    </script>
+
+    <style>
+        ul {list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;}
+        table {width:100%;}
+        table, th, td {border: 1px solid black;
+            border-collapse: collapse;}
+        th, td {padding: 15px;
+            text-align: left;}
+        .mainScreenTable tr:nth-child(even) {background-color: #eee;}
+        .mainScreenTable tr:nth-child(odd) {background-color: #fff;}
+        .mainScreenTable th {background-color: black;
+            color: white;}
+
+        li {float: left;}
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;}
+
+        li a:hover {background-color: #111111;}
+
+        select {background-color: #111111;
+            color: white;}
+
+        /* for the scrolling of the table */
+        #table-wrapper {position:relative;}
+        #table-scroll {height:250px;
+            overflow:auto;
+            margin-top:20px;}
+        #table-wrapper table {width:80%;}
+        #table-wrapper table thead th .text {
+            position:absolute;
+            top:-20px;
+            z-index:2;
+            height:20px;
+            width:35%;
+            border:1px solid #ff0000;}
+    </style>
+</head>
+
+<body>
+<h1>Ritzpa III</h1>
+<ul>
+    <li><a href="MainScreenAdmin.html">Main Menu</a> </li>
+    <li><a href="chatroom.html">Chatroom</a> </li>
+    <li><a href="logout">Logout</a></li>
+</ul>
+<br>
+<form method="GET" action="goToStock">
+    <label for="stocks">Choose a Company: </label>
+    <select name="stocks" id="stocks"></select>
+    <input type="submit">
+</form>
+<br>
+<table class ="mainScreenTable" id="stocksMainScreenTable">
+    <tr>
+        <th>Symbol</th>
+        <th>Company Name</th>
+        <th>Stock Gate</th>
+        <th>Overall Transactions</th>
+        <th>Stock Cycle</th>
+    </tr>
+</table><!--Stocks table in main menu-->
+<br>
+<table class ="mainScreenTable" id="usersMainScreenTable">
+    <tr>
+        <th>Name</th>
+        <th>Admin</th>
+    </tr>
+</table><!--Users table in main menu-->
+<br>
+</body>
+</html>
+

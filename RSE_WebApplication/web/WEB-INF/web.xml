@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+<!--Servlets Names and Packages-->
+
+    <!--1)--><servlet>
+        <servlet-name>LoginUserServlet</servlet-name>
+        <servlet-class>servlets.LoginUserServlet</servlet-class></servlet>
+    <!--2)--><servlet>
+        <servlet-name>LoadXMLServlet</servlet-name>
+        <servlet-class>servlets.LoadXMLServlet</servlet-class></servlet>
+    <!--3)--><servlet>
+        <servlet-name>CompanyIssueServlet</servlet-name>
+        <servlet-class>servlets.CompanyIssueServlet</servlet-class></servlet>
+    <!--4)--><servlet>
+        <servlet-name>UserMainScreenTableServlet</servlet-name>
+        <servlet-class>servlets.UserMainScreenTableServlet</servlet-class></servlet>
+    <!--5)--><servlet>
+        <servlet-name>StockMainScreenTableServlet</servlet-name>
+        <servlet-class>servlets.StockMainScreenTableServlet</servlet-class></servlet>
+    <!--6)--><servlet>
+        <servlet-name>LogoutServlet</servlet-name>
+        <servlet-class>servlets.LogoutServlet</servlet-class></servlet>
+        <!--7)--><servlet>
+        <servlet-name>ActionMainScreenTableServlet</servlet-name>
+        <servlet-class>servlets.ActionMainScreenTableServlet</servlet-class></servlet>
+<!--8)--><servlet>
+        <servlet-name>AddMoneyServlet</servlet-name>
+        <servlet-class>servlets.AddMoneyServlet</servlet-class></servlet>
+        <!--9)--><servlet>
+        <servlet-name>CashServlet</servlet-name>
+        <servlet-class>servlets.CashServlet</servlet-class></servlet>
+<!--10)--><servlet>
+        <servlet-name>StocksOptionServlet</servlet-name>
+        <servlet-class>servlets.StocksOptionServlet</servlet-class></servlet>
+        <!--11)--><servlet>
+        <servlet-name>RedirectToStockPageServlet</servlet-name>
+        <servlet-class>servlets.RedirectToStockPageServlet</servlet-class></servlet>
+        <!--12)--><servlet>
+        <servlet-name>TransactionTableServlet</servlet-name>
+        <servlet-class>servlets.TransactionTableServlet</servlet-class></servlet>
+        <!--13)--><servlet>
+        <servlet-name>TradeInstructionServlet</servlet-name>
+        <servlet-class>servlets.TradeInstructionServlet</servlet-class></servlet>
+        <!--14)--><servlet>
+        <servlet-name>SellTableServlet</servlet-name>
+        <servlet-class>servlets.SellTableServlet</servlet-class></servlet>
+        <!--15)--><servlet>
+        <servlet-name>BuyTableServlet</servlet-name>
+        <servlet-class>servlets.BuyTableServlet</servlet-class></servlet>
+        <!--16)--><servlet>
+        <servlet-name>ChatServlet</servlet-name>
+        <servlet-class>servlets.ChatServlet</servlet-class></servlet>
+        <!--16)--><servlet>
+        <servlet-name>UsersListServlet</servlet-name>
+        <servlet-class>servlets.UsersListServlet</servlet-class></servlet>
+        <!--16)--><servlet>
+        <servlet-name>SendChatServlet</servlet-name>
+        <servlet-class>servlets.SendChatServlet</servlet-class></servlet>
+<!---->
+
+<!--Servlets Mapping and URL-->
+
+    <!--1)--><servlet-mapping>
+        <servlet-name>LoginUserServlet</servlet-name>
+        <url-pattern>/loginUserToRizpa</url-pattern></servlet-mapping>
+    <!--2)--><servlet-mapping>
+        <servlet-name>LoadXMLServlet</servlet-name>
+        <url-pattern> /pages/mainScreenPage/loadFile</url-pattern></servlet-mapping>
+    <!--3)--><servlet-mapping>
+        <servlet-name>CompanyIssueServlet</servlet-name>
+        <url-pattern> /pages/mainScreenPage/companyIssue</url-pattern></servlet-mapping>
+    <!--4)--><servlet-mapping>
+        <servlet-name>UserMainScreenTableServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/usersMainScreenTable</url-pattern></servlet-mapping>
+    <!--5)--><servlet-mapping>
+        <servlet-name>StockMainScreenTableServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/stocksMainScreenTable</url-pattern></servlet-mapping>
+    <!--6)--><servlet-mapping>
+        <servlet-name>LogoutServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/logout</url-pattern></servlet-mapping>
+        <!--7)--><servlet-mapping>
+        <servlet-name>ActionMainScreenTableServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/actionsMainScreenTable</url-pattern></servlet-mapping>
+        <!--8)--><servlet-mapping>
+        <servlet-name>AddMoneyServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/addMoney</url-pattern></servlet-mapping>
+        <!--9)--><servlet-mapping>
+        <servlet-name>CashServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/cashAccount</url-pattern>
+        <url-pattern>/pages/singleStockPage/cashAccount</url-pattern>
+        </servlet-mapping>
+        <!--10)--><servlet-mapping>
+        <servlet-name>StocksOptionServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/stocksOption</url-pattern>
+        <url-pattern>/pages/singleStockPage/stocksOption</url-pattern>
+        </servlet-mapping>
+        <!--11)--><servlet-mapping>
+        <servlet-name>RedirectToStockPageServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/goToStock</url-pattern></servlet-mapping>
+        <!--12)--><servlet-mapping>
+        <servlet-name>TransactionTableServlet</servlet-name>
+        <url-pattern>/pages/singleStockPage/transactionsTable</url-pattern></servlet-mapping>
+        <!--13)--><servlet-mapping>
+        <servlet-name>TradeInstructionServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/tradeInstruction</url-pattern></servlet-mapping>
+        <!--14)--><servlet-mapping>
+        <servlet-name>SellTableServlet</servlet-name>
+        <url-pattern>/pages/singleStockPage/sellTable</url-pattern></servlet-mapping>
+        <!--15)--><servlet-mapping>
+        <servlet-name>BuyTableServlet</servlet-name>
+        <url-pattern>/pages/singleStockPage/buyTable</url-pattern></servlet-mapping>
+        <!--16)--><servlet-mapping>
+        <servlet-name>ChatServlet</servlet-name>
+        <url-pattern>/chat</url-pattern></servlet-mapping>
+        <!--17)--><servlet-mapping>
+        <servlet-name>UsersListServlet</servlet-name>
+        <url-pattern>/userslist</url-pattern></servlet-mapping>
+        <!--17)--><servlet-mapping>
+        <servlet-name>SendChatServlet</servlet-name>
+        <url-pattern>/pages/mainScreenPage/sendChat</url-pattern></servlet-mapping>
+<!---->
+</web-app>
